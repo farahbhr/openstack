@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+
+
+<div class="sidebar">
+  <!--
+    Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+-->
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="javascript:void(0)" class="simple-text logo-mini">
+        
+      </a>
+      <a href="javascript:void(0)" class="simple-text logo-normal">
+        Project
+      </a>
+    </div>
+    <ul class="nav">
+      <div class="item"><a href="./index.html"><i class="fas fa-desktop"></i>Dashboard</a></div>
+    <div class="item">
+      <a class="sub-btn"><i class="fas fa-table"></i>Create topology<i class="fas fa-angle-right dropdown"></i></a>
+      <div class="sub-menu">
+        <a href="2tier.html" class="sub-item">2-tier application</a>
+        <a href="3tier.html" class="sub-item">multi-tier application</a>
+      </div>
+    </div>
+    <div class="item">
+      <a class="sub-btn"><i class="fas fa-cogs"></i>Configuration<i class="fas fa-angle-right dropdown"></i></a>
+      <div class="sub-menu">
+        <a href="compute.html" class="sub-item">Compute</a>
+        <a href="storage.html" class="sub-item">Storage</a>
+        <a href="networking.html" class="sub-item">Networking</a>
+        <a href="security.html" class="sub-item">Security</a>
+      </div>
+    </div>
+    <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+  
+
+<script type="text/javascript">
+$(document).ready(function(){
+  //jquery for toggle sub menus
+  $('.sub-btn').click(function(){
+    $(this).next('.sub-menu').slideToggle();
+    $(this).find('.dropdown').toggleClass('rotate');
+  });
+
+  //jquery for expand and collapse the sidebar
+  $('.menu-btn').click(function(){
+    $('.side-bar').addClass('active');
+    $('.menu-btn').css("visibility", "hidden");
+  });
+
+  $('.close-btn').click(function(){
+    $('.side-bar').removeClass('active');
+    $('.menu-btn').css("visibility", "visible");
+  });
+});
+</script>
+    </ul>
+  </div>
+</div>

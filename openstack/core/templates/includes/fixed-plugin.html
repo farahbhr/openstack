@@ -1,0 +1,40 @@
+
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Your own configuration</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors text-center">
+              <span class="badge filter badge-primary active" data-color="primary"></span>
+              <span class="badge filter badge-info" data-color="blue"></span>
+              <span class="badge filter badge-success" data-color="green"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="adjustments-line text-center color-change">
+          <span class="color-label">LIGHT MODE</span>
+          <span class="badge light-badge mr-2"></span>
+          <span class="badge dark-badge ml-2"></span>
+          <span class="color-label">DARK MODE</span>
+        </li>
+        <form role="form" method="post" action="">
+              
+          {% csrf_token %}
+        <li class="button-container">
+            {{ form1.code }}    
+        </li>    
+        <li class="button-container text-center">
+          <button name="Execute" class="btn btn-round btn-info"><i class="fas fa-terminal"> </i>Execute</button>
+          <br>
+          <br>
+        </li>
+        </form>
+      </ul>
+    </div>
+  </div>
+  </div>

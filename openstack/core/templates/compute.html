@@ -1,0 +1,196 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Page User {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <form role="form" method="post" action="">
+              
+          {% csrf_token %}
+        <div class="card-header">
+          <h5 class="title">Configure Databases </h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>ipaddress </label>
+                  {{ form.ipaddress }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Database name</label>
+                  {{ form.databasename }}
+                </div>
+              </div>
+            </div>
+       <br><br><br><br> <br><br>
+       {{msg}}
+         
+        </div>
+        <div class="card-footer">
+          <button type="submit" name="submit" class="btn btn-fill btn-primary">Install</button>
+        </div>
+      
+      </form>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Configure application </h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>ipaddress </label>
+                  <input type="text" class="form-control" placeholder="10.0.2.0" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>name</label>
+                  <input type="text" class="form-control" placeholder="" >
+                </div>
+              </div>
+            </div>
+       <br><br><br><br> <br><br><br><br>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-fill btn-primary">Install</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Configure servers </h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>ipaddress </label>
+                  <input type="text" class="form-control" placeholder="10.0.2.0" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>name</label>
+                  <input type="text" class="form-control" placeholder="exple : apache" >
+                </div>
+              </div>
+            </div>
+       <br><br><br><br> <br><br><br><br>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-fill btn-primary">Install</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Create instance</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Name </label>
+                  <input type="text" class="form-control" placeholder="Instance name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Image</label>
+                  <input type="text" class="form-control" placeholder="Image">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>flavor</label>
+                  <input type="text" class="form-control" placeholder="flavor">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Network</label>
+                  <input type="text" class="form-control" placeholder="Network">
+                </div>
+              </div>
+            </div>
+           
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-fill btn-primary">ADD</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Delete instance</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Name </label>
+                  <input type="text" class="form-control" placeholder="Instance name" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Network</label>
+                  <input type="text" class="form-control" placeholder="Network" >
+                </div>
+              </div>
+            </div>
+       <br><br><br><br> <br><br><br><br>
+       <div class="card-footer">
+        <button type="submit" class="btn btn-fill btn-primary">Delete</button>
+      </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

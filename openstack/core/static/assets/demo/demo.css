@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.tim-row {
+  margin-bottom: 20px;
+}
+
+.tim-white-buttons {
+  background-color: #777777;
+}
+
+.typography-line {
+  padding-left: 25%;
+  margin-bottom: 35px;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.typography-line span {
+  bottom: 10px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  left: 0;
+  position: absolute;
+  width: 260px;
+  text-transform: none;
+}
+
+.tim-row {
+  padding-top: 60px;
+}
+
+.tim-row h3 {
+  margin-top: 0;
+}
+
+.offline-doc .page-header {
+  display: flex;
+  align-items: center;
+}
+
+.offline-doc .footer {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  bottom: 0;
+  color: #fff;
+  z-index: 1;
+}
+
+@media all and (min-width: 992px) {
+  .sidebar .nav>li.active-pro {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+  }
+}
+
+.card.card-upgrade .card-category {
+  max-width: 530px;
+  margin: 0 auto;
+}
+.sidebar .nav{
+  width: 100%;
+  margin-top: 40px;
+}
+
+.sidebar .nav .item{
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar .nav .item a{
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  line-height: 60px;
+}
+
+.sidebar .nav .item a:hover{
+  background: #8621F8;
+  transition: 0.3s ease;
+}
+
+.sidebar .nav .item i{
+  margin-right: 15px;
+}
+
+.sidebar .nav .item a .dropdown{
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+.sidebar .nav .item .sub-menu{
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.sidebar .nav .item .sub-menu a{
+  padding-left: 80px;
+}
+.rotate{
+  transform: rotate(90deg);
+}

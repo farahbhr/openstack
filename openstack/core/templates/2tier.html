@@ -1,0 +1,113 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} UI Icons {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+
+        <form role="form" method="post" action="">
+              
+          {% csrf_token %}
+        <div class="card-header">
+          <h5 class="title">Crete a 2 Tier Application</h5>
+        </div>
+        <div class="card-body">
+         
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Enter the authentication URL</label>
+                  {{ form.authurl }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Password</label>
+                  {{ form.password }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Number of web servers</label>
+                  {{ form.webservers }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Number of data servers</label>
+                  {{ form.database }}
+                </div>
+              </div>
+            </div>
+            
+           {{msg}}
+         
+        </div>
+        <div class="card-footer">
+          <button type="submit" name="create" class="btn btn-fill btn-primary">Create topologie </button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="card-body">
+          <p class="card-text">
+            <div class="author">
+              <div class="block block-one"></div>
+              <div class="block block-two"></div>
+              <div class="block block-three"></div>
+              <div class="block block-four"></div>
+              <p class="description">
+                Application
+              </p>
+            </div>
+          </p>
+          <div class="card-description">
+            L'application est utilisée pour diviser une application d'entreprise en deux ou plusieurs composants qui peuvent être développés et exécutés séparément.
+            <br><br>
+            Haute performance 
+<br>Haute disponibilité / basculement 
+<br>Tolérance aux pannes 
+<br>Réplication
+<br>Sécurité
+
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="button-container">
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+              <i class="fab fa-facebook"></i>
+            </button>
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+              <i class="fab fa-google-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{msg1}}<br><br> 
+  {{err}} 
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
