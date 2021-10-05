@@ -24,6 +24,11 @@ resource "openstack_networking_subnet_v2" "subnet_web" {
   ip_version = 4
 }
 
+resource "openstack_networking_router_interface_v2" "int_web" {
+  router_id  = "${openstack_networking_router_v2.router_1.id}"
+  subnet_id  = "${openstack_networking_subnet_v2.subnet_web.id}"
+}
+
 resource "openstack_compute_secgroup_v2" "secgroup_web" {
   name        = "secgroup_web"
   description = "a security group"
