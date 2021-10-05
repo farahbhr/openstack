@@ -142,11 +142,6 @@ resource "openstack_networking_router_interface_v2" "int_app1" {
 }
 
 
-resource "openstack_networking_router_v2" "router_3" {
-  name              = "router_3"
-  admin_state_up    = "true"
-}
-
 resource "openstack_networking_router_interface_v2" "int_data" {
   router_id = "${openstack_networking_router_v2.router_3.id}"
   subnet_id = "${openstack_networking_subnet_v2.subnet_data.id}"
