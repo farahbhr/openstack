@@ -8,3 +8,11 @@ resource "openstack_networking_router_v2" "router_2" {
   name           = "router_2"
   admin_state_up = "true"
 }
+
+
+
+resource "openstack_networking_router_v2" "router_3" {
+  name              = "router_3"
+  admin_state_up    = "true"
+}
+
