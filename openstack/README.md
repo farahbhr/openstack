@@ -3,7 +3,7 @@
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/imenhr/openstack.git
+
 $ cd openstack/openstack
 $
 $ # Virtualenv modules installation (Unix based systems)
